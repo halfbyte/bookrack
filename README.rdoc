@@ -1,5 +1,5 @@
 == Yet another Rails example app.
 
 This app is meant to serve as an example app for building a JSON based API 
-
+for a standard rails app.
 
