@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+
+
+
   # GET /books
   # GET /books.json
   def index
@@ -6,7 +9,7 @@ class BooksController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @books }
+      format.json
     end
   end
 
