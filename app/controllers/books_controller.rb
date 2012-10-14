@@ -1,13 +1,17 @@
 class BooksController < ApplicationController
+
+  respond_to :html, :json
+
   # GET /books
   # GET /books.json
   def index
     @books = Book.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @books }
-    end
+    respond_with @books.map{|b| { 
+      id: b.id, 
+      title: b.title, 
+      author: b.author, 
+      created_at: b.created_at 
+    }}
   end
 
   # GET /books/1
